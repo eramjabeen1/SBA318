@@ -12,8 +12,6 @@
     <h1 class="scale-up">Welcome to Your Interview Prep</h1>
 
 
-
-
     <p>this tool was built to help you practice technical and behavioral questions in a simple way. below is a guide to remind you how to structure answers using the star method + a section to save your 6 main stories.</p>
 
     <h2>STAR Method Guide</h2>
@@ -54,6 +52,7 @@
       <li><a href="/behavioral">Practice Behavioral Questions</a></li>
       <li><a href="/technical">Practice Technical Questions</a></li>
     </ul>
+    <button onclick="downloadStories()" class="save-button">Download My 6 Stories</button>
   </div>
 
   <script>
@@ -98,6 +97,25 @@
         }
       }
     };
+    function downloadStories() {
+  let content = "My 6 Key Interview Stories\n\n";
+
+  for (let i = 1; i <= 6; i++) {
+    const textarea = document.querySelector(`[data-id="story-${i}"]`);
+    const answer = textarea.value || '(no story)';
+    content += `Story ${i}:\n${answer}\n\n`;
+  }
+
+  const blob = new Blob([content], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `my_6_stories_${new Date().toISOString().split('T')[0]}.txt`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
   </script>
 </body>
 </html>
