@@ -39,6 +39,10 @@ The purpose of this lab is to demonstrate understanding of Express.js fundamenta
 - Vanilla JavaScript (no libraries/frameworks)
 - LocalStorage (for saving answers)
 
+## Note 
+
+This app uses localStorage instead of a database, so update and delete functionality is handled entirely client side. As a result, PUT/DELETE routes weren’t required. Query parameters weren’t used since the app doesn’t require filtering or dynamic queries but if expanded with a backend, RESTful routes and query handling would be implemented accordingly.
+
 ## Getting Started
 
 To run this project locally:
