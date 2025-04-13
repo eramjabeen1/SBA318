@@ -90,3 +90,26 @@ nav a:hover {
     transition: all 0.3s ease;
   }
   
+
+  .save-message {
+    color: green;
+    font-size: 0.9rem;
+    margin-left: 10px;
+    transition: opacity 0.3s ease;
+  }
+  
+/* cleaner toggle */
+
+  .toggle-btn button {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: inherit;
+    font-size: 0.9rem;
+  }
+  
+  .toggle-btn button:hover {
+    background-color: #eee;
+  }
+  

@@ -5,29 +5,39 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <%- include('partials/navbar') %>
-    <h1>Welcome to the Interview Prep API!</h1>
+  <%- include('partials/navbar') %>
+  <h1>Welcome to the Interview Prep API!</h1>
   <p>A helpful resource for behavioral and technical interview prep.</p>
 
   <ul>
-    <li><a href="/behavioral"> Practice Behavioral Questions </a></li>
-    <li><a href="/technical">  Practice Technical Questions </a></li>
+    <li><a href="/behavioral">Practice Behavioral Questions</a></li>
+    <li><a href="/technical">Practice Technical Questions</a></li>
   </ul>
-</ul>
 
-<script>
-  // switch between light and dark mode
-  function toggleTheme() {
-    document.body.classList.toggle('dark-mode');
-    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+  <script>
+    // theme toggle
+    function toggleTheme() {
+  const isDark = document.body.classList.toggle('dark-mode');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+  const btn = document.getElementById('theme-toggle-btn');
+  btn.textContent = isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+}
+
+window.onload = () => {
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    const btn = document.getElementById('theme-toggle-btn');
+    if (btn) btn.textContent = 'Switch to Light Mode';
   }
+};
 
-  // keep theme preference on reload
-  window.onload = () => {
-    if (localStorage.getItem('theme') === 'dark') {
-      document.body.classList.add('dark-mode');
+    // keep theme preference on reload
+    window.onload = () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+      }
     }
-  }
-</script>
+  </script>
 </body>
 </html>

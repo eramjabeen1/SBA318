@@ -1,5 +1,4 @@
 <% /* eslint-disable */ %>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,14 +6,14 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <%- include('partials/navbar') %>
+  <%- include('partials/navbar') %>
   <h1>Technical Interview Questions</h1>
+
   <ul>
     <% questions.forEach(q => { %>
       <li style="margin-bottom: 30px;">
         <strong>Q:</strong> <%= q.question %><br>
-        
-  
+
         <!-- answer textarea -->
         <textarea 
           rows="3" 
@@ -22,11 +21,14 @@
           class="answer-box" 
           data-id="<%= q.id %>"></textarea>
         <br>
-  
+
+       
         <!-- save & reveal buttons -->
-        <button onclick="saveAnswer(<%= q.id %>)">Save Answer</button>
-        <button onclick="revealAnswer(<%= q.id %>)"> Reveal Hint</button>
-  
+    <button onclick="saveAnswer(<%= q.id %>)">Save Answer</button>
+    <span class="save-message" id="save-msg-<%= q.id %>"></span> 
+    <button onclick="revealAnswer(<%= q.id %>)">Reveal Hint</button>
+
+
         <!-- hidden answer -->
         <p id="answer-<%= q.id %>" style="display:none; color: #888; margin-top: 5px;">
           <strong>Hint:</strong> <%= q.answer %>
@@ -34,45 +36,63 @@
       </li>
     <% }) %>
   </ul>
-  
+
   <a href="/" style="display: block; margin-top: 40px;">⬅ back to home</a>
 
-
   <script>
-    // everything runs when the page loads
+    // run when the page loads
     window.onload = () => {
       // apply saved theme
       if (localStorage.getItem('theme') === 'dark') {
         document.body.classList.add('dark-mode');
       }
-  
+
       // load saved answers
       document.querySelectorAll('.answer-box').forEach(textarea => {
         const id = textarea.dataset.id;
         textarea.value = localStorage.getItem('answer-' + id) || '';
       });
     };
-  
+
     // save typed answer
     function saveAnswer(id) {
-      const value = document.querySelector(`textarea[data-id="${id}"]`).value;
-      localStorage.setItem('answer-' + id, value);
-      alert('Saved!');
-    }
-  
+  const value = document.querySelector(`textarea[data-id="${id}"]`).value;
+  localStorage.setItem('answer-' + id, value);
+
+  // show "Saved!" message
+  const msg = document.getElementById(`save-msg-${id}`);
+  if (msg) {
+    msg.textContent = 'Saved!';
+    setTimeout(() => {
+      msg.textContent = '';
+    }, 1500);
+  }
+}
+
+
     // reveal hint/answer
     function revealAnswer(id) {
       const el = document.getElementById('answer-' + id);
       el.style.display = el.style.display === 'none' ? 'block' : 'none';
     }
-  
-    // toggle between light and dark mode
-    function toggleTheme() {
-      document.body.classList.toggle('dark-mode');
-      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-    }
-  </script>
 
-  
+    // theme toggle
+    function toggleTheme() {
+  const isDark = document.body.classList.toggle('dark-mode');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+  const btn = document.getElementById('theme-toggle-btn');
+  btn.textContent = isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+}
+
+window.onload = () => {
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    const btn = document.getElementById('theme-toggle-btn');
+    if (btn) btn.textContent = 'Switch to Light Mode';
+  }
+};
+
+  </script>
 </body>
 </html>
