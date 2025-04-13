@@ -1,7 +1,7 @@
 # Interview Prep API  
 ## SBA 318 – Node.js & Express
 
-This is a simple, interactive Node.js & Express app to help practice both behavioral and technical interview questions. It was built as part of a software engineering bootcamp project — but let’s be real, it’s also my personal study buddy.
+This is a simple, interactive Node.js & Express app to help practice both behavioral and technical interview questions. It was built as part of a software engineering bootcamp project.. but let’s be real, it’s also my personal study buddy.
 
 This project was inspired by the upcoming JRA interview and designed to prep me (and maybe others) for real-world technical and behavioral assessments... because why not turn anxiety into something functional? Hehe.
 
