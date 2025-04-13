@@ -1,115 +1,213 @@
+/* ========== BASE STYLING ========== */
+/* sets the default font and background for the body */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #f7f9fc;
-    padding: 40px;
-    color: #333;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f7f9fc;
+  padding: 40px;
+  color: #333;
 }
 
+/* styling for all h1 tags */
 h1 {
-    color: #8aadd3;
+  color: #8aadd3;
 }
 
+/* paragraph size styling */
 p {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
 
 
-/* hover effect nav bar */
+/* ========== NAVBAR STYLING ========== */
+/* hover effect for links in nav */
 nav a:hover {
-    color: #333;
-    text-decoration: underline;
-    transition: 0.3s ease;
-  }
-  
-  /* navbar base */
+  color: #333;
+  text-decoration: underline;
+  transition: 0.3s ease;
+}
+
+/* the full nav bar container */
 .navbar {
-    background-color: var(--bg);
-    padding: 16px 24px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 900px;
-    margin: 20px auto;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  }
-  
-  /* logo */
-  .logo {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--accent);
-  }
-  
-  /* nav links */
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .nav-links a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  .nav-links a:hover {
-    color: var(--text);
-    text-decoration: underline;
-  }
-  
-  /* theme toggle */
-  .toggle-btn {
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: var(--accent);
-  }
-  
-  /* light mode (default) */
-  :root {
-    --bg: #f0f4ff;
-    --accent: #0667ce;
-    --text: #222;
-    --body-bg: #f9f9f9;
-  }
-  
-  /* dark mode styles */
-  body.dark-mode {
-    --bg: #1e293b;
-    --accent: #90cdf4;
-    --text: #f8f8f8;
-    --body-bg: #111827;
-  }
-  
-  body {
-    background-color: var(--body-bg);
-    color: var(--text);
-    transition: all 0.3s ease;
-  }
-  
+  background-color: var(--bg);
+  padding: 16px 24px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
 
-  .save-message {
-    color: green;
-    font-size: 0.9rem;
-    margin-left: 10px;
-    transition: opacity 0.3s ease;
-  }
-  
-/* cleaner toggle */
+/* logo text (left side) */
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--accent);
+}
 
-  .toggle-btn button {
-    background-color: transparent;
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    cursor: pointer;
-    color: inherit;
-    font-size: 0.9rem;
+/* nav link section (ul) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+/* each nav link (a) style */
+.nav-links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+
+/* ========== THEME TOGGLE ========== */
+/* moon/sun icon or text toggle area */
+.toggle-btn {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+/* cleaned-up version of toggle using a button */
+.toggle-btn button {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: inherit;
+  font-size: 0.9rem;
+}
+
+.toggle-btn button:hover {
+  background-color: #eee;
+}
+
+
+/* ========== THEME COLORS (LIGHT vs DARK) ========== */
+/* light mode (default) */
+:root {
+  --bg: #f0f4ff;
+  --accent: #0667ce;
+  --text: #222;
+  --body-bg: #f9f9f9;
+}
+
+/* dark mode settings (will apply if dark-mode is added to body) */
+body.dark-mode {
+  --bg: #1e293b;
+  --accent: #90cdf4;
+  --text: #f8f8f8;
+  --body-bg: #111827;
+}
+
+/* applies the current theme colors */
+body {
+  background-color: var(--body-bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+
+/* ========== SAVE MESSAGE ========== */
+/* green “Saved!” text when a button is clicked */
+.save-message {
+  color: green;
+  font-size: 0.9rem;
+  margin-left: 10px;
+  transition: opacity 0.3s ease;
+}
+
+
+/* ========== CONTAINER STYLING ========== */
+/* keeps page centered and readable */
+.page-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+/* ========== BUTTON STYLES ========== */
+/* save button look */
+.save-button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* save button hover effect */
+.save-button:hover {
+  background-color: #0056b3;
+}
+
+
+/* ========== TYPEWRITER TEXT EFFECT ========== */
+/* for fun animated typing effect (like it’s being typed out live) */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+/* class to add to any h1 for typing effect */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #fff;
+  width: 0;
+  animation:
+    typing 2.5s steps(30, end) forwards,
+    blink 0.75s step-end infinite;
+  font-family: monospace;
+  font-size: 2rem;
+  color: #9ec1ff;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+
+/* ========== GLOWING + SCALE-UP TITLE ========== */
+/* for fun glowing animated headings */
+@keyframes scaleFadeIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
-  
-  .toggle-btn button:hover {
-    background-color: #eee;
+}
+
+@keyframes scaleFadeGlow {
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
-  
+}
+
+/* scale-up with glow effect (used on h1) */
+.scale-up {
+  transform: scale(0.8);
+  opacity: 0;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #91cfff;
+  text-shadow: 0 0 2px #91cfff, 0 0 4px #5aaeff;
+  animation: scaleFadeGlow 0.8s ease-out forwards;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}

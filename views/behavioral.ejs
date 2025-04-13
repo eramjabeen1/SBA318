@@ -7,33 +7,26 @@
 </head>
 <body>
   <%- include('partials/navbar') %>
-  <h1>Behavioral Interview Questions</h1>
 
-
-  <ul>
-    <% questions.forEach(q => { %>
-      <li style="margin-bottom: 30px;">
-        <% if (q.question) { %>
+  <div class="page-container">
+    <h1 class="typewriter">Behavioral Interview Questions</h1>
+    <ul>
+      <% questions.forEach(q => { %>
+        <li style="margin-bottom: 30px;">
           <strong>Q:</strong> <%= q.question %><br>
-        <% } else { %>
-          <strong>Q:</strong> (no question provided)<br>
-        <% } %>
-  
-        <textarea 
-          rows="3" 
+          <textarea
+          rows="4" 
+          class="answer-box"
+          style="width: 100%; height: 120px;"
           placeholder="Type your answer here..." 
-          class="answer-box" 
-          data-id="<%= q.id %>"></textarea>
-        <br>
+          data-id="<%= q.id %>"></textarea><br>
+          <button onclick="saveAnswer(<%= q.id %>)">Save Answer</button>
+          <span class="save-message" id="save-msg-<%= q.id %>"></span>
+        </li>
+      <% }) %>
+    </ul>
+  </div> <!-- End .page-container -->
   
-        <button onclick="saveAnswer(<%= q.id %>)">Save Answer</button>
-        <span class="save-message" id="save-msg-<%= q.id %>"></span>
-      </li>
-    <% }); %> <!-- THIS closes the forEach loop -->
-  </ul>
-  
-  
-
   <a href="/" style="display: block; margin-top: 40px;">⬅ back to home</a>
 
   <script>
