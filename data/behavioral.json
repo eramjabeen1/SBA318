@@ -1,0 +1,103 @@
+[
+    {
+      "id": 1,
+      "question": "Can you identify a professional weakness or area for improvement that you’ve worked on? How have you addressed it?",
+      "category": "Self-Awareness"
+    },
+    {
+      "id": 2,
+      "question": "What is your strength or superpower, and how do you leverage your strengths to contribute to your team or organization’s goals?",
+      "category": "Strengths"
+    },
+    {
+      "id": 3,
+      "question": "Describe a situation where you received constructive criticism. How did you respond, and what changes did you make based on the feedback?",
+      "category": "Feedback"
+    },
+    {
+      "id": 4,
+      "question": "Describe a time when you handled a difficult customer or client. What was the issue, and how did you resolve it?",
+      "category": "Customer Service"
+    },
+    {
+      "id": 5,
+      "question": "What unique qualities or skills do you bring to this role that you believe set you apart from other candidates?",
+      "category": "Uniqueness"
+    },
+    {
+      "id": 6,
+      "question": "Tell me about a time when you faced a setback or failure at work. How did you handle it, and what did you learn from the experience?",
+      "category": "Failure"
+    },
+    {
+      "id": 7,
+      "question": "Describe an instance where you took on a challenging task or role despite having some doubts about your abilities. How did you overcome your reservations and succeed?",
+      "category": "Confidence"
+    },
+    {
+      "id": 8,
+      "question": "Can you provide an example of how you’ve maintained professionalism during a stressful or high-pressure situation? What strategies did you use to stay composed and effective?",
+      "category": "Professionalism"
+    },
+    {
+      "id": 9,
+      "question": "Can you provide an example of how you’ve helped someone who was having difficulty with a task or project? How did you offer assistance, and what was the outcome?",
+      "category": "Teamwork"
+    },
+    {
+      "id": 10,
+      "question": "Tell me about a situation where you identified a potential issue or risk before it became a problem. How did you recognize it, and what actions did you take to address it?",
+      "category": "Proactiveness"
+    },
+    {
+      "id": 11,
+      "question": "Describe a time when you had to make a difficult decision that tested your principles or ethics. How did you navigate the situation, and what did you learn from it?",
+      "category": "Ethics"
+    },
+    {
+      "id": 12,
+      "question": "Tell me about a time when you were entrusted with a sensitive or confidential task. How did you handle the responsibility, and what measures did you take to maintain trust?",
+      "category": "Responsibility"
+    },
+    {
+      "id": 13,
+      "question": "Tell me about your proudest professional accomplishment.",
+      "category": "Accomplishment"
+    },
+    {
+      "id": 14,
+      "question": "Give me an example of a time you faced a conflict while working on a team. How did you handle that?",
+      "category": "Conflict Resolution"
+    },
+    {
+      "id": 15,
+      "question": "Tell me about a time when you had to adjust to a colleague’s or team’s working style in order to complete a project or achieve your objectives.",
+      "category": "Adaptability"
+    },
+    {
+      "id": 16,
+      "question": "Tell me about a time you used your analytical skills to solve a complex problem in a creative way.",
+      "category": "Problem Solving"
+    },
+    {
+      "id": 17,
+      "question": "Can you describe a time when a colleague or teammate made a mistake, and you discovered it? How did you handle that?",
+      "category": "Accountability"
+    },
+    {
+      "id": 18,
+      "question": "Tell me about a time you had to take on a leadership role within a team or work group.",
+      "category": "Leadership"
+    },
+    {
+      "id": 19,
+      "question": "Tell me about a time when you received feedback that was less than positive.",
+      "category": "Feedback"
+    },
+    {
+      "id": 20,
+      "question": "Tell me about a time when you successfully explained a technical problem to someone who didn’t have a tech background.",
+      "category": "Communication"
+    }
+  ]
+  

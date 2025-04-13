@@ -1,0 +1,78 @@
+<% /* eslint-disable */ %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Technical Interview Questions</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include('partials/navbar') %>
+  <h1>Technical Interview Questions</h1>
+  <ul>
+    <% questions.forEach(q => { %>
+      <li style="margin-bottom: 30px;">
+        <strong>Q:</strong> <%= q.question %><br>
+        
+  
+        <!-- answer textarea -->
+        <textarea 
+          rows="3" 
+          placeholder="Type your answer here..." 
+          class="answer-box" 
+          data-id="<%= q.id %>"></textarea>
+        <br>
+  
+        <!-- save & reveal buttons -->
+        <button onclick="saveAnswer(<%= q.id %>)">Save Answer</button>
+        <button onclick="revealAnswer(<%= q.id %>)"> Reveal Hint</button>
+  
+        <!-- hidden answer -->
+        <p id="answer-<%= q.id %>" style="display:none; color: #888; margin-top: 5px;">
+          <strong>Hint:</strong> <%= q.answer %>
+        </p>
+      </li>
+    <% }) %>
+  </ul>
+  
+  <a href="/" style="display: block; margin-top: 40px;">⬅ back to home</a>
+
+
+  <script>
+    // everything runs when the page loads
+    window.onload = () => {
+      // apply saved theme
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+      }
+  
+      // load saved answers
+      document.querySelectorAll('.answer-box').forEach(textarea => {
+        const id = textarea.dataset.id;
+        textarea.value = localStorage.getItem('answer-' + id) || '';
+      });
+    };
+  
+    // save typed answer
+    function saveAnswer(id) {
+      const value = document.querySelector(`textarea[data-id="${id}"]`).value;
+      localStorage.setItem('answer-' + id, value);
+      alert('Saved!');
+    }
+  
+    // reveal hint/answer
+    function revealAnswer(id) {
+      const el = document.getElementById('answer-' + id);
+      el.style.display = el.style.display === 'none' ? 'block' : 'none';
+    }
+  
+    // toggle between light and dark mode
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    }
+  </script>
+
+  
+</body>
+</html>

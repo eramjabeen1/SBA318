@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "question": "What is version control, and why is it important in software development?",
+    "answer": "Version control helps developers track code changes, collaborate, and roll back mistakes. Git is the most commonly used version control system."
+  },
+  {
+    "id": 2,
+    "question": "Explain the difference between git pull and git fetch.",
+    "answer": "git fetch gets updates from the remote repo without merging. git pull does fetch + merge together."
+  },
+  {
+    "id": 3,
+    "question": "How do you resolve a merge conflict in Git?",
+    "answer": "Use a code editor or CLI to review conflicts, choose which changes to keep, then commit the resolution."
+  },
+  {
+    "id": 4,
+    "question": "What is the purpose of a .gitignore file?",
+    "answer": "It tells Git which files/folders to ignore, like node_modules or .env."
+  },
+  {
+    "id": 5,
+    "question": "Can you explain the process of forking a repository and submitting a pull request on GitHub?",
+    "answer": "Fork the repo to your GitHub, make changes, push to your fork, then open a pull request to the original repo."
+  },
+  {
+    "id": 6,
+    "question": "What are the benefits of using GitHub for project collaboration?",
+    "answer": "GitHub helps teams collaborate using branches, pull requests, issue tracking, and project boards."
+  },
+  {
+    "id": 7,
+    "question": "What is Agile methodology, and how does it benefit software development?",
+    "answer": "Agile is an iterative development method that helps teams deliver working software quickly and adapt to changes."
+  },
+  {
+    "id": 8,
+    "question": "Can you describe the key roles in a Scrum team?",
+    "answer": "Scrum roles include Product Owner, Scrum Master, and Development Team."
+  },
+  {
+    "id": 9,
+    "question": "What is a sprint, and how do you plan one?",
+    "answer": "A sprint is a short development cycle. Planning involves setting sprint goals, selecting tasks, and assigning them."
+  },
+  {
+    "id": 10,
+    "question": "How do you handle changing requirements during a project?",
+    "answer": "Use Agile flexibility, frequent check-ins, and clear documentation to adapt smoothly."
+  },
+  {
+    "id": 11,
+    "question": "What is the Box Model in CSS?",
+    "answer": "The Box Model describes how padding, border, and margin affect the layout of an HTML element."
+  },
+  {
+    "id": 12,
+    "question": "Explain the difference between position: relative, position: absolute, and position: fixed.",
+    "answer": "Relative positions an element based on its normal flow. Absolute removes it from flow and positions it relative to the nearest positioned ancestor. Fixed positions it relative to the viewport."
+  },
+  {
+    "id": 13,
+    "question": "What is Flexbox, and when would you use it?",
+    "answer": "Flexbox is a CSS layout model used for aligning items in rows or columns with space distribution. It's great for responsive design."
+  },
+  {
+    "id": 14,
+    "question": "Explain the difference between var, let, and const.",
+    "answer": "var is function-scoped. let and const are block-scoped. const cannot be reassigned."
+  },
+  {
+    "id": 15,
+    "question": "What is the difference between == and === in JavaScript?",
+    "answer": "== checks for value equality with type coercion. === checks for value and type equality."
+  },
+  {
+    "id": 16,
+    "question": "How does the JavaScript event loop work?",
+    "answer": "The event loop allows asynchronous callbacks to be executed after the current stack is cleared, using the task queue."
+  },
+  {
+    "id": 17,
+    "question": "What are promises, and how do they differ from callbacks?",
+    "answer": "Promises handle async code more cleanly than nested callbacks. They have .then(), .catch(), and support chaining."
+  },
+  {
+    "id": 18,
+    "question": "Can you explain async and await and provide an example?",
+    "answer": "async/await simplify working with Promises. Use await inside an async function to wait for a Promise to resolve."
+  },
+  {
+    "id": 19,
+    "question": "What is the DOM, and how does JavaScript interact with it?",
+    "answer": "The DOM is the document structure of HTML. JavaScript can manipulate it using methods like getElementById, innerHTML, etc."
+  },
+  {
+    "id": 20,
+    "question": "What is TypeScript, and why would you use it instead of JavaScript?",
+    "answer": "TypeScript is a typed superset of JavaScript that helps catch bugs during development with static type checking."
+  },
+  {
+    "id": 21,
+    "question": "What are interfaces in TypeScript?",
+    "answer": "Interfaces define object shapes. They help enforce structure and improve code readability and safety."
+  },
+  {
+    "id": 22,
+    "question": "What is Express.js, and why is it used in web development?",
+    "answer": "Express.js is a fast, minimalist framework for Node.js used to build APIs and server-side web apps."
+  },
+  {
+    "id": 23,
+    "question": "How do you create a REST API using Node.js and Express?",
+    "answer": "Define routes (GET, POST, etc.), use middleware, and send JSON responses. Setup with express.Router() or directly in app.js."
+  },
+  {
+    "id": 24,
+    "question": "What is MongoDB, and how is it different from SQL databases?",
+    "answer": "MongoDB is a NoSQL document database using JSON-like documents. SQL databases use structured tables and schemas."
+  },
+  {
+    "id": 25,
+    "question": "What is React, and why is it popular in front-end development?",
+    "answer": "React is a JS library for building user interfaces with reusable components and a virtual DOM for performance."
+  },
+  {
+    "id": 26,
+    "question": "What are React hooks, and why are they used (e.g., useState, useEffect)?",
+    "answer": "Hooks let you use state and lifecycle features in functional components. useState manages data, useEffect handles side effects."
+  },
+  {
+    "id": 27,
+    "question": "What is Redux, and how does it help with state management in React applications?",
+    "answer": "Redux is a predictable state container. It centralizes app state and uses actions and reducers for updates."
+  },
+  {
+    "id": 28,
+    "question": "What is CI/CD, and why is it important in modern software development?",
+    "answer": "CI/CD automates testing and deployment. It ensures code quality and enables fast, safe releases."
+  },
+  {
+    "id": 29,
+    "question": "Can you describe a typical CI/CD pipeline?",
+    "answer": "A pipeline includes stages like build, test, and deploy. Tools like GitHub Actions, Jenkins, or CircleCI are common."
+  },
+  {
+    "id": 30,
+    "question": "What is the software development lifecycle (SDLC)?",
+    "answer": "SDLC is the process of planning, creating, testing, and deploying software, often in phases like Waterfall or Agile."
+  }
+]
