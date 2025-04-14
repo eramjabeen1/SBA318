@@ -71,12 +71,9 @@ SBA318/ ├── data/ JSON files with interview questions ├── public/ CS
 ![image](https://github.com/user-attachments/assets/433501ed-bd85-4754-bac6-ac3f8b386579)
 ![image](https://github.com/user-attachments/assets/00345ef6-7d71-4d11-a75a-c245504a45a4)
 
+This app is currently in development. I attempted deployment through Render to make it accessible for classmates, but ran into build issues due to the use of localStorage (no database) and directory structure. Deployment will be added soon. In the meantime, you can explore all the features through the screenshots above and the full code in this repo!
 
-
-
-
-
-This app is currently in development. I attempted deployment via Render, but ran into build issues related to directory configuration and localStorage limitations. I’m continuing to troubleshoot and plan to have it live soon. For now, please refer to the screenshots above and the GitHub repo to explore the full functionality.
+P.S. The titles on the "Technical Interview Questions" and "Behavioral Interview Questions" pages feature a fun typewriter-style animation to keep the experience engaging!
 
 
 
