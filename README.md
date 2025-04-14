@@ -62,13 +62,18 @@ git clone https://github.com/eramjabeen1/SBA318.git cd SBA318
 SBA318/ ├── data/ JSON files with interview questions ├── public/ CSS files ├── routes/ Express route handlers ├── views/ EJS templates for pages ├── app.js Main Express app └── README.md Project overview
 
 ## Screenshots
-![image](https://github.com/user-attachments/assets/14d7e699-9f86-42c9-8fc9-f39394437614)
-![image](https://github.com/user-attachments/assets/d18e3f68-aa1e-4380-8438-bd08c0b65d21)
-![image](https://github.com/user-attachments/assets/ad51fd50-9b45-42c2-b5ad-66107beafc82)
-![image](https://github.com/user-attachments/assets/4824a238-efbd-4f75-91cd-c9fdf6c890fb)
-![image](https://github.com/user-attachments/assets/3a10fd7b-c60c-4332-baad-92af95642db6)
-![image](https://github.com/user-attachments/assets/947c74cf-4af8-4602-95ca-d92675fdc108)
+![image](https://github.com/user-attachments/assets/827318a6-5ad0-4f4d-b008-0b31dd66675a)
+![image](https://github.com/user-attachments/assets/68ed5db1-94cc-499e-9f34-0bc9d272477f)
+![image](https://github.com/user-attachments/assets/e34278d1-dcd1-412f-aab8-44c242477c3d)
+![image](https://github.com/user-attachments/assets/0d7b23fe-a2e5-4e15-8624-a537d5850f87)
+![image](https://github.com/user-attachments/assets/91a1dfe5-3de4-4bf5-9832-494a322c0539)
 ![image](https://github.com/user-attachments/assets/a34ed1e6-e9f4-413a-a152-330b1bd8d181)
+![image](https://github.com/user-attachments/assets/433501ed-bd85-4754-bac6-ac3f8b386579)
+![image](https://github.com/user-attachments/assets/00345ef6-7d71-4d11-a75a-c245504a45a4)
+
+
+
+
 
 
 This app is currently in development. I attempted deployment via Render, but ran into build issues related to directory configuration and localStorage limitations. I’m continuing to troubleshoot and plan to have it live soon. For now, please refer to the screenshots above and the GitHub repo to explore the full functionality.
